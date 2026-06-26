@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindle Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация (горен бар) -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <span class="logo">📖 Kindle</span>
+        </div>
+        <div class="nav-center">
+            <input type="text" placeholder="Търси книги...">
+        </div>
+        <div class="nav-right">
+            <button id="loginBtn">Вход</button>
+            <button id="libraryBtn">📚 Моята библиотека</button>
+        </div>
+    </nav>
+
+    <!-- Главно съдържание -->
+    <main class="main-content">
+        <h1>Добре дошли в Kindle</h1>
+        <div class="book-grid" id="bookGrid">
+            <!-- Книгите ще се зареждат тук с JavaScript -->
+        </div>
+    </main>
+
+    <!-- Четец на книги (скрит по подразбиране) -->
+    <div id="reader" style="display: none;">
+        <div class="reader-header">
+            <button id="closeReader">✕ Затвори</button>
+            <span id="bookTitle">Име на книгата</span>
+            <div class="reader-controls">
+                <button id="fontDecrease">A-</button>
+                <button id="fontIncrease">A+</button>
+            </div>
+        </div>
+        <div class="reader-content" id="readerContent">
+            <p>Тук ще се показва съдържанието на книгата...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
