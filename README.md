@@ -13,7 +13,7 @@ KindleFy is a web app designed to bring useful tools and entertainment together 
 
 ## 🚀 Live Demo
 
-https://YOUR_USERNAME.github.io/KindleFy/
+https://kindle-fy.github.io/KindleFy/
 
 ## 📦 Technologies
 
