@@ -23,12 +23,6 @@ https://kindle-fy.github.io/KindleFy/
 - SVG Icons
 - Progressive Web App (PWA)
 
-## 📱 Installation
-
-1. Open the website.
-2. Click **Install App** (if your browser supports it).
-3. Enjoy KindleFy like a native app.
-
 ## 📄 License
 
 This project is licensed under the MIT License.
