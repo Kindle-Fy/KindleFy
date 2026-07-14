@@ -26,3 +26,5 @@ https://kindle-fy.github.io/KindleFy/
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+You can join the Discord server for future updates and problems https://discord.gg/EXt9KWbx6
