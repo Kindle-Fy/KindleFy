@@ -103,3 +103,29 @@ function openApp(appName) {
     console.log("Opening:", appName);
 
 }
+
+// ===== Search =====
+
+const search = document.getElementById("search");
+
+if(search){
+
+    search.addEventListener("input", () => {
+
+        const value = search.value.toLowerCase();
+
+        document.querySelectorAll(".app").forEach(app => {
+
+            const name =
+                app.innerText.toLowerCase();
+
+            app.style.display =
+                name.includes(value)
+                ? ""
+                : "none";
+
+        });
+
+    });
+
+}
