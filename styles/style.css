@@ -141,3 +141,66 @@ footer{
 
 }
 
+/* ===== Dark Mode ===== */
+
+body.dark{
+
+    background:#111;
+
+    color:white;
+
+}
+
+body.dark header{
+
+    border-bottom:2px solid white;
+
+}
+
+body.dark footer{
+
+    border-top:2px solid white;
+
+    color:#ddd;
+
+}
+
+body.dark .app{
+
+    background:#222;
+
+    color:white;
+
+    border-color:white;
+
+}
+
+body.dark .app:hover{
+
+    background:#333;
+
+}
+
+body.dark .search-box input{
+
+    background:#222;
+
+    color:white;
+
+    border-color:white;
+
+}
+
+/* ===== Large Text ===== */
+
+body.large-text{
+
+    font-size:120%;
+
+}
+
+body.large-text .app span{
+
+    font-size:22px;
+
+}
