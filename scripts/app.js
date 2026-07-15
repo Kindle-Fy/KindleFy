@@ -108,7 +108,7 @@ function openApp(appName) {
 
 const search = document.getElementById("search");
 
-if(search){
+if (search) {
 
     search.addEventListener("input", () => {
 
@@ -116,52 +116,53 @@ if(search){
 
         document.querySelectorAll(".app").forEach(app => {
 
-            const name =
-                app.innerText.toLowerCase();
+            const name = app.innerText.toLowerCase();
 
-            app.style.display =
-                name.includes(value)
+            app.style.display = name.includes(value)
                 ? ""
                 : "none";
 
+        });
+
+    });
+
+}
+
 // ===== Apply Settings =====
 
-function applySettings(){
+function applySettings() {
 
-    if(localStorage.getItem("darkMode")==="true"){
-    window.location.reload();
-        
+    if (localStorage.getItem("darkMode") === "true") {
+
         document.body.classList.add("dark");
 
-    }else{
+    } else {
 
         document.body.classList.remove("dark");
 
     }
 
-    if(localStorage.getItem("largeText")==="true"){
-    window.location.reload();
-        
+    if (localStorage.getItem("largeText") === "true") {
+
         document.body.classList.add("large-text");
 
-    }else{
+    } else {
 
         document.body.classList.remove("large-text");
 
     }
 
-    const statusBar=document.getElementById("status-bar");
+    const statusBar = document.getElementById("status-bar");
 
-    if(statusBar){
+    if (statusBar) {
 
-        if(localStorage.getItem("showClock")==="false"){
-        window.location.reload();
-            
-            statusBar.style.display="none";
+        if (localStorage.getItem("showClock") === "false") {
 
-        }else{
+            statusBar.style.display = "none";
 
-            statusBar.style.display="flex";
+        } else {
+
+            statusBar.style.display = "flex";
 
         }
 
@@ -169,4 +170,4 @@ function applySettings(){
 
 }
 
-window.addEventListener("load",applySettings);
+window.addEventListener("load", applySettings);
