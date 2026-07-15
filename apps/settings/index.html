@@ -1,145 +1,61 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
 
-<title>KindleFy Settings</title>
-
-<style>
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
-    margin:0;
-    padding:25px;
-}
-
-h1{
-    text-align:center;
-}
-
-.card{
-    background:white;
-    border:2px solid black;
-    border-radius:12px;
-    padding:20px;
-    margin:20px 0;
-}
-
-button{
-    width:100%;
-    padding:15px;
-    margin-top:10px;
-    font-size:18px;
-    border:2px solid black;
-    background:white;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#ddd;
-}
-
-select{
-    width:100%;
-    padding:12px;
-    font-size:18px;
-}
-
-a{
-    display:block;
-    margin-top:25px;
-    text-align:center;
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-}
-
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>⚙️ Settings</h1>
+<header>
 
-<div class="card">
+<h1>Settings</h1>
 
-<h2>Language</h2>
+<p>KindleFy Preferences</p>
 
-<select id="language">
+</header>
 
-<option value="en">English</option>
-<option value="bg">Български</option>
+<main>
 
-</select>
+<div class="setting">
 
-</div>
+    <span>Dark Mode</span>
 
-<div class="card">
-
-<h2>Wallpaper</h2>
-
-<button onclick="changeWallpaper()">
-
-Change Wallpaper
-
-</button>
+    <input type="checkbox" id="darkMode">
 
 </div>
 
-<div class="card">
+<div class="setting">
 
-<h2>Storage</h2>
+    <span>Show Clock</span>
 
-<button onclick="clearData()">
-
-Clear KindleFy Data
-
-</button>
+    <input type="checkbox" id="showClock" checked>
 
 </div>
 
-<a href="../../index.html">
+<div class="setting">
 
-⬅ Back
+    <span>Large Text</span>
 
-</a>
+    <input type="checkbox" id="largeText">
 
-<script>
+</div>
 
-const language=document.getElementById("language");
+</main>
 
-language.value=localStorage.getItem("language")||"en";
+<footer>
 
-language.onchange=()=>{
+<p>KindleFy v1.1</p>
 
-localStorage.setItem("language",language.value);
+<a href="../../index.html">Back</a>
 
-alert("Language saved!");
+</footer>
 
-}
-
-function changeWallpaper(){
-
-alert("Wallpaper manager is coming in Version 1.1");
-
-}
-
-function clearData(){
-
-if(confirm("Delete all KindleFy data?")){
-
-localStorage.clear();
-
-alert("Done!");
-
-}
-
-}
-
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>
