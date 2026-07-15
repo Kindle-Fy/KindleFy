@@ -124,8 +124,46 @@ if(search){
                 ? ""
                 : "none";
 
-        });
+// ===== Apply Settings =====
 
-    });
+function applySettings(){
+
+    if(localStorage.getItem("darkMode")==="true"){
+
+        document.body.classList.add("dark");
+
+    }else{
+
+        document.body.classList.remove("dark");
+
+    }
+
+    if(localStorage.getItem("largeText")==="true"){
+
+        document.body.classList.add("large-text");
+
+    }else{
+
+        document.body.classList.remove("large-text");
+
+    }
+
+    const statusBar=document.getElementById("status-bar");
+
+    if(statusBar){
+
+        if(localStorage.getItem("showClock")==="false"){
+
+            statusBar.style.display="none";
+
+        }else{
+
+            statusBar.style.display="flex";
+
+        }
+
+    }
 
 }
+
+window.addEventListener("load",applySettings);
