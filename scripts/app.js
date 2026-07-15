@@ -171,3 +171,28 @@ function applySettings() {
 }
 
 window.addEventListener("load", applySettings);
+
+// ===== Wallpaper =====
+
+const wallpaper = localStorage.getItem("wallpaper");
+
+switch (wallpaper) {
+
+    case "paper":
+
+        document.body.style.background =
+
+            "url('assets/wallpapers/paper.jpg') center/cover";
+
+        break;
+
+    case "dark":
+
+        document.body.style.background = "#111";
+
+        break;
+
+    default:
+
+        document.body.style.background = "#f5f5f5";
+}
