@@ -1,4 +1,4 @@
-// KindleFy v1.0
+// KindleFy v1.1
 
 console.log("KindleFy Loaded");
 
@@ -6,18 +6,83 @@ window.addEventListener("load", () => {
 
     if (!localStorage.getItem("kindlefy-first-launch")) {
 
-        alert("📚 Welcome to KindleFy!");
+        alert("Welcome to KindleFy!");
 
         localStorage.setItem("kindlefy-first-launch", "true");
+
     }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    updateNetwork();
+    window.addEventListener("online", updateNetwork);
+    window.addEventListener("offline", updateNetwork);
+
+    updateBattery();
 
 });
 
-function openApp(appName) {
+// ===== Clock =====
 
-    console.log("Opening: " + appName);
+function updateClock() {
+
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+
+    const time = document.getElementById("time");
+
+    if (time) {
+        time.textContent = `${hours}:${minutes}`;
+    }
 
 }
+
+// ===== Network =====
+
+function updateNetwork() {
+
+    const network = document.getElementById("network");
+
+    if (!network) return;
+
+    network.textContent = navigator.onLine ? "Online" : "Offline";
+
+}
+
+// ===== Battery =====
+
+async function updateBattery() {
+
+    const batteryElement = document.getElementById("battery");
+
+    if (!batteryElement) return;
+
+    if (!navigator.getBattery) {
+
+        batteryElement.textContent = "--%";
+        return;
+
+    }
+
+    const battery = await navigator.getBattery();
+
+    function refreshBattery() {
+
+        batteryElement.textContent =
+            Math.round(battery.level * 100) + "%";
+
+    }
+
+    refreshBattery();
+
+    battery.addEventListener("levelchange", refreshBattery);
+
+}
+
+// ===== Settings =====
 
 function saveSetting(key, value) {
 
@@ -28,5 +93,13 @@ function saveSetting(key, value) {
 function getSetting(key) {
 
     return localStorage.getItem(key);
+
+}
+
+// ===== Apps =====
+
+function openApp(appName) {
+
+    console.log("Opening:", appName);
 
 }
