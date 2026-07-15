@@ -107,5 +107,37 @@ footer{
     .apps{
         grid-template-columns:repeat(2,1fr);
     }
+    
+/* ===== Search ===== */
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.search-box input{
+
+    width:320px;
+    max-width:90%;
+
+    padding:12px;
+
+    font-size:18px;
+
+    border:2px solid black;
+
+    border-radius:12px;
+
+    background:white;
+
+    outline:none;
 
 }
+
+.search-box input:focus{
+
+    background:#ececec;
+
+}
+
