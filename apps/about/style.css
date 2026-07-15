@@ -1,0 +1,52 @@
+body{
+
+font-family:Arial;
+margin:0;
+background:#f5f5f5;
+color:#111;
+
+}
+
+header{
+
+padding:30px;
+text-align:center;
+border-bottom:2px solid black;
+
+}
+
+.card{
+
+margin:30px;
+
+padding:25px;
+
+border:2px solid black;
+
+border-radius:15px;
+
+background:white;
+
+}
+
+.card hr{
+
+margin:20px 0;
+
+}
+
+.back{
+
+display:block;
+
+text-align:center;
+
+margin:30px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:black;
+
+}
