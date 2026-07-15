@@ -129,7 +129,8 @@ if(search){
 function applySettings(){
 
     if(localStorage.getItem("darkMode")==="true"){
-
+    window.location.reload();
+        
         document.body.classList.add("dark");
 
     }else{
@@ -139,7 +140,8 @@ function applySettings(){
     }
 
     if(localStorage.getItem("largeText")==="true"){
-
+    window.location.reload();
+        
         document.body.classList.add("large-text");
 
     }else{
@@ -153,7 +155,8 @@ function applySettings(){
     if(statusBar){
 
         if(localStorage.getItem("showClock")==="false"){
-
+        window.location.reload();
+            
             statusBar.style.display="none";
 
         }else{
