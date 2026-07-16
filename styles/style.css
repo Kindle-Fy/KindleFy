@@ -204,3 +204,48 @@ body.large-text .app span{
     font-size:22px;
 
 }
+
+/* ===== Dark Wallpaper Theme ===== */
+
+body.dark-wallpaper{
+
+    background:#111;
+    color:white;
+
+}
+
+body.dark-wallpaper .app{
+
+    background:#222;
+    border-color:white;
+
+}
+
+body.dark-wallpaper .app span{
+
+    color:white;
+
+}
+
+body.dark-wallpaper h1,
+body.dark-wallpaper h2,
+body.dark-wallpaper p,
+body.dark-wallpaper a{
+
+    color:white;
+
+}
+
+body.dark-wallpaper .search-box input{
+
+    background:#222;
+    color:white;
+    border:2px solid white;
+
+}
+
+body.dark-wallpaper .search-box input::placeholder{
+
+    color:#ccc;
+
+}
