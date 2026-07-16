@@ -175,7 +175,7 @@ window.addEventListener("load", applySettings);
 // ===== Wallpaper =====
 
 const wallpaper = localStorage.getItem("wallpaper");
-
+document.body.classList.remove("dark-wallpaper");
 switch (wallpaper) {
 
     case "paper":
@@ -188,9 +188,9 @@ switch (wallpaper) {
 
     case "dark":
 
-        document.body.style.background = "#111";
+        document.body.classList.add("dark-wallpaper");
 
-        break;
+       break;
 
     default:
 
