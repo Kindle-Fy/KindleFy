@@ -107,7 +107,7 @@ footer{
     .apps{
         grid-template-columns:repeat(2,1fr);
     }
-    
+    }
 /* ===== Search ===== */
 
 .search-box{
@@ -248,4 +248,14 @@ body.dark-wallpaper .search-box input::placeholder{
 
     color:#ccc;
 
+}
+
+body.dark-wallpaper .app img{
+    filter: invert(1);
+}
+
+body.dark-wallpaper #status-bar,
+body.dark-wallpaper header p,
+body.dark-wallpaper footer{
+    color:white;
 }
